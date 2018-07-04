@@ -1,0 +1,10 @@
+baseURL: http://example.org/
+languageCode: en-gb
+title: Emma and Stuart
+theme: hugo-fresh
+
+params:
+  hero:
+    tagline: Emma and Stuart
+    subTagline: Saturday, 30 June 2018
+    image: hero-image.png

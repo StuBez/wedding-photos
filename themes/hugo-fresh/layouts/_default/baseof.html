@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ partial "meta.html" . }}
+    <title>{{ .Site.Title }}</title>
+    {{ partial "css.html" . }}
+  </head>
+  <body>
+    {{ block "main" . }}
+    {{ partial "hero.html" . }}
+    <!-- Back-to-top button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+    {{ end }}
+
+    {{ partial "javascript.html" . }}
+  </body>
+</html>

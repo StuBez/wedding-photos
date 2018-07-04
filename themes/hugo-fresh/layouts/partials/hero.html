@@ -1,0 +1,33 @@
+{{- $hero := .Site.Params.hero }}
+{{- $tagline := $hero.tagline -}}
+{{- $subTagline := $hero.subtagline -}}
+{{- $heroImageUrl := printf "img/%s" $hero.image | absURL -}}
+<section class="hero is-fullheight is-default is-bold is-slanted">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="columns is-fixed-top" style="padding-top:60px;">
+        <div class="column is-5 is-offset-1 has-text-left">
+          <h1 class="big-title">
+            {{ $tagline }}
+          </h1>
+          {{- with $subTagline -}}
+          <h2 class="subtitle is-5">
+            {{ . }}
+          </h2>
+          {{- end -}}
+        </div>
+        <div class="column is-5">
+          <figure class="image is-4by4">
+            <img src="{{ $heroImageUrl }}" alt="Description">
+          </figure>
+        </div>
+      </div>
+      <div class="columns is-vcentered">
+          <div class="column is-10 is-offset-1 has-text-left">
+            <h2 class="big-title">Photos</h2>
+            {{ .Content }}
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
